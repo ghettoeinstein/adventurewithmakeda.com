@@ -1,10 +1,10 @@
 // Pages: network-first. Assets: stale-while-revalidate, so updates land on the next visit.
-const CACHE = 'awm-multiverse-v9';
+const CACHE = 'awm-multiverse-v10';
 const CORE = [
   './', './index.html', './story.html', './world.html', './song.html', './parents.html',
   './styles.css', './site.js', './enchant.js', './manifest.json', './favicon.png',
   './assets/logo-360.webp', './assets/logo-720.webp', './assets/logo-1200.webp',
-  './assets/book1-cover-480.webp', './assets/book3-cover-480.webp', './assets/book4-cover-480.webp', './assets/book2-cover-v2-640.webp', './assets/book1-card-360.webp', './assets/book2-card-360.webp', './assets/book3-card-360.webp', './assets/book4-card-360.webp',
+  './assets/book1-cover-480.webp', './assets/book3-cover-480.webp', './assets/book4-cover-480.webp', './assets/book2-cover-v2-640.webp', './assets/book1-card-360.webp', './assets/book2-card-360.webp', './assets/book3-card-360.webp', './assets/book4-card-360.webp', './assets/book5-card-360.webp', './assets/book5-cover-480.webp',
   './assets/cameo-makeda.webp', './assets/cameo-apollo.webp', './assets/cameo-faith.webp',
   './assets/theme-cover-400.webp', './assets/deco-heart.webp', './assets/deco-stars.webp', './assets/deco-gem-red.webp', './assets/deco-gem-green.webp', './assets/deco-crown.webp', './assets/deco-pearl.webp',
   './assets/value-learn.webp', './assets/value-faith.webp', './assets/value-love.webp', './assets/value-happiness.webp',

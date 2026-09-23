@@ -1018,3 +1018,20 @@ p { margin: 0 0 1em; }
   .shelf.shelf4 { min-height: 290px; }
   .shelf.shelf4 .book.f1, .shelf.shelf4 .book.f2, .shelf.shelf4 .book.f3, .shelf.shelf4 .book.f4 { --bw: 100px; }
 }
+
+/* ---------- five-book fan (Books 1–5), every card identical in size ---------- */
+.shelf.shelf5 { min-height: clamp(420px, 40vw, 560px); }
+.shelf.shelf5 .book { --ry: 0deg; aspect-ratio: 9 / 16 !important; width: var(--bw); transform: var(--pose); transition: transform .6s var(--spring); --bw: clamp(130px, 12.4vw, 180px); }
+.shelf.shelf5 .book.f1 { --pose: translate(-126%, 12%) rotateY(18deg) rotate(-13deg); z-index: 1; }
+.shelf.shelf5 .book.f2 { --pose: translate(-64%, 3%) rotateY(10deg) rotate(-6.5deg); z-index: 2; }
+.shelf.shelf5 .book.f3 { --pose: translate(0, -2%); z-index: 4; }
+.shelf.shelf5 .book.f4 { --pose: translate(64%, 3%) rotateY(-10deg) rotate(6.5deg); z-index: 2; }
+.shelf.shelf5 .book.f5 { --pose: translate(126%, 12%) rotateY(-18deg) rotate(13deg); z-index: 1; }
+@media (hover: hover) { .shelf.shelf5 .book:hover { transform: var(--pose) translateY(-8%) scale(1.06); z-index: 6; } }
+.library { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 860px) {
+  .shelf.shelf5 { min-height: 250px; }
+  .shelf.shelf5 .book { --bw: 84px; }
+  .library { grid-template-columns: repeat(2, 1fr); }
+  .library > li:last-child { grid-column: 1 / -1; justify-self: center; width: 50%; }
+}
