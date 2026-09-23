@@ -890,3 +890,7 @@ p { margin: 0 0 1em; }
 @media (prefers-reduced-motion: reduce) {
   .sky .hero-copy, .sky-page .wrap, .sky .shelf, .sky .floaty, .sky .clouds { translate: none; opacity: 1; }
 }
+/* square Book 2 matched to the visual weight of the portrait covers */
+.lib-stage { --stage-h: clamp(230px, 24vw, 340px); height: var(--stage-h); }
+.lib-stage .book.b2 { width: min(100%, calc(var(--stage-h) * .8)); height: auto; max-height: none; }
+@media (max-width: 860px) { .lib-stage { --stage-h: 220px; } }
