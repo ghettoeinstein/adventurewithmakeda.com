@@ -11,14 +11,14 @@
 <meta property="og:image" content="https://adventurewithmakeda.com/assets/book4-cover-768.webp">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/pwa-icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600;1,700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap">
 <link rel="preload" as="image" href="assets/logo-1200.webp" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=f5eb6b22">
+<link rel="stylesheet" href="styles.css?v=9c60f601">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -55,6 +55,7 @@
         <a class="btn btn-jewel btn-lg" href="#worlds"><span class="gloss" aria-hidden="true"></span>Enter the worlds <span class="arrow" aria-hidden="true">&rarr;</span></a>
         <a class="btn btn-parchment btn-lg" href="#family"><span class="gloss" aria-hidden="true"></span>Meet Makeda</a>
       </div>
+      <a class="song-chip" href="#theme" data-play-theme><span class="song-chip-note" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 17.5V6.2l10-2.2v11.3"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="15.3" r="2.5"/></svg></span>Play the theme song</a>
     </div>
     <div class="shelf shelf4" aria-label="Adventure with Makeda books 1 to 4">
       <div class="shelf-glow" aria-hidden="true"></div>
@@ -78,6 +79,33 @@
   <svg class="trail" aria-hidden="true"><path class="base"/><path class="dots"/></svg>
   <ol class="nodes" style="list-style:none;margin:0;padding:0" aria-label="Worlds of the Makeda Multiverse"><li class="node" style="--x:10%;--y:62%;--mx:30%;--my:8%;--dl:-0.0s"><button class="portal" type="button" data-world="ethiopia" aria-label="Book 1: Welcome to Ethiopia. Open this world."><span class="badge-num" aria-hidden="true">Book 1</span><img src="assets/book1-cover-480.webp" alt="" style="--op:48% 50%" loading="lazy" decoding="async"></button><span class="node-title">Welcome to Ethiopia</span><span class="node-tag">Open the world</span></li><li class="node" style="--x:31%;--y:28%;--mx:70%;--my:27%;--dl:-0.9s"><button class="portal" type="button" data-world="forest" aria-label="Book 2: The Forest of Belonging. Open this world."><span class="badge-num" aria-hidden="true">Book 2</span><img src="assets/book2-cover-v2-640.webp" alt="" style="--op:50% 55%" loading="lazy" decoding="async"></button><span class="node-title">The Forest of Belonging</span><span class="node-tag">Open the world</span></li><li class="node" style="--x:52%;--y:66%;--mx:32%;--my:47%;--dl:-1.8s"><button class="portal" type="button" data-world="garden" aria-label="Book 3: Auntie Rocky&rsquo;s Legacy Garden. Open this world."><span class="badge-num" aria-hidden="true">Book 3</span><img src="assets/book3-cover-480.webp" alt="" style="--op:42% 55%" loading="lazy" decoding="async"></button><span class="node-title">Auntie Rocky&rsquo;s Legacy Garden</span><span class="node-tag">Open the world</span></li><li class="node" style="--x:72%;--y:30%;--mx:68%;--my:67%;--dl:-2.7s"><button class="portal" type="button" data-world="realm" aria-label="Book 4: Apollo and the Realm of Brilliant Minds. Open this world."><span class="badge-num" aria-hidden="true">Book 4</span><img src="assets/book4-cover-480.webp" alt="" style="--op:50% 52%" loading="lazy" decoding="async"></button><span class="node-title">Apollo and the Realm of Brilliant Minds</span><span class="node-tag">Open the world</span></li><li class="node" style="--x:91%;--y:64%;--mx:34%;--my:88%;--dl:-3.6s"><button class="portal soon" type="button" data-world="milo" aria-label="Milo&rsquo;s Magical Groove. Coming soon."><span class="badge-num" aria-hidden="true">Soon</span><span class="orb" style="--c1:#7df0b0;--c2:#118a58"><img src="assets/deco-gem-green.webp" alt="" loading="lazy" decoding="async"></span></button><span class="node-title">Milo&rsquo;s Magical Groove</span><span class="node-tag soon">Coming soon</span></li></ol>
 </div>
+  </div>
+</section>
+
+<section class="section theme-section" id="theme" aria-labelledby="theme-title">
+  <div class="wrap">
+    <div class="royal-player reveal" data-player>
+      <div class="rp-art">
+        <span class="rp-halo" aria-hidden="true"></span>
+        <img src="assets/theme-cover-800.webp" srcset="assets/theme-cover-400.webp 400w, assets/theme-cover-800.webp 800w" sizes="(max-width: 860px) 72vw, 360px" width="800" height="800" alt="Theme song artwork: Makeda waving in her crown, holding a compass, above the Adventure with Makeda logo." loading="lazy" decoding="async">
+      </div>
+      <div class="rp-body">
+        <p class="eyebrow">The official theme song</p>
+        <h2 id="theme-title" class="display-m">Adventure with Makeda</h2>
+        <p class="rp-sub">Sing, dance, and explore with Makeda and Faith!</p>
+        <div class="rp-controls">
+          <button class="rp-play" type="button" data-play aria-label="Play the theme song">
+            <img class="rp-crown" src="assets/deco-crown.webp" alt="" aria-hidden="true">
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4.2" height="14" rx="1.4"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.4"/></svg>
+          </button>
+          <div class="rp-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="rp-progress" aria-hidden="true"><span class="rp-bar"></span></div>
+        <p class="rp-time"><span data-cur>0:00</span><span>3:08</span></p>
+      </div>
+      <audio preload="none" src="assets/audio/makeda-theme-v1.mp3"></audio>
+    </div>
   </div>
 </section>
 
@@ -203,7 +231,7 @@
     <small>&copy; 2026 Adventure with Makeda. Stories by Angel Washington. All rights reserved.</small>
   </div>
 </footer>
-<script src="site.js?v=f5eb6b22" defer></script>
-<script src="enchant.js?v=f5eb6b22" defer></script>
+<script src="site.js?v=9c60f601" defer></script>
+<script src="enchant.js?v=9c60f601" defer></script>
 </body>
 </html>

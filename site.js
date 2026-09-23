@@ -81,7 +81,7 @@
     }
   };
   document.addEventListener('pointerdown', e => {
-    const t = e.target.closest('.btn, .portal, .value, .cameo .ring, .world-close');
+    const t = e.target.closest('.btn, .portal, .value, .cameo .ring, .world-close, .rp-play, .song-chip');
     if (t) burst(e.clientX, e.clientY, t.matches('.portal') ? 18 : 10);
   });
 
@@ -108,6 +108,51 @@
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
     dlg.addEventListener('close', () => opener?.focus());
   });
+
+  // Royal theme-song player: one track, play / pause. Nothing loads until the first tap.
+  const player = document.querySelector('[data-player]');
+  if (player) {
+    const audio = player.querySelector('audio');
+    const btn = player.querySelector('[data-play]');
+    const cur = player.querySelector('[data-cur]');
+    const fmt = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+    const sync = () => {
+      const on = !audio.paused;
+      player.classList.toggle('playing', on);
+      btn.setAttribute('aria-label', on ? 'Pause the theme song' : 'Play the theme song');
+      if ('mediaSession' in navigator) navigator.mediaSession.playbackState = on ? 'playing' : 'paused';
+    };
+    const play = () => {
+      player.classList.add('loading');
+      if ('mediaSession' in navigator && !navigator.mediaSession.metadata) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: 'Adventure with Makeda', artist: 'Adventure with Makeda', album: 'Theme Song',
+          artwork: [
+            { src: 'assets/theme-cover-400.webp', sizes: '400x400', type: 'image/webp' },
+            { src: 'assets/theme-cover-800.webp', sizes: '800x800', type: 'image/webp' },
+            { src: 'assets/pwa-icon-512.png', sizes: '512x512', type: 'image/png' },
+          ],
+        });
+        navigator.mediaSession.setActionHandler('play', () => audio.play());
+        navigator.mediaSession.setActionHandler('pause', () => audio.pause());
+      }
+      return audio.play().catch(() => {}).finally(() => player.classList.remove('loading'));
+    };
+    btn.addEventListener('click', () => (audio.paused ? play() : audio.pause()));
+    ['play', 'pause', 'ended'].forEach(ev => audio.addEventListener(ev, sync));
+    audio.addEventListener('timeupdate', () => {
+      if (!audio.duration) return;
+      player.style.setProperty('--p', `${(audio.currentTime / audio.duration) * 100}%`);
+      cur.textContent = fmt(audio.currentTime);
+    });
+    audio.addEventListener('ended', () => { audio.currentTime = 0; player.style.setProperty('--p', '0%'); cur.textContent = '0:00'; });
+    // hero chip: start the song, then glide down to the player
+    document.querySelectorAll('[data-play-theme]').forEach(chip => chip.addEventListener('click', e => {
+      e.preventDefault();
+      play();
+      player.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+    }));
+  }
 
   // Offline shell
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
