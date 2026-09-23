@@ -1,7 +1,7 @@
 // Pages: network-first. Assets: stale-while-revalidate, so updates land on the next visit.
-const CACHE = 'awm-multiverse-v7';
+const CACHE = 'awm-multiverse-v8';
 const CORE = [
-  './', './index.html', './story.html', './world.html', './parents.html',
+  './', './index.html', './story.html', './world.html', './song.html', './parents.html',
   './styles.css', './site.js', './enchant.js', './manifest.json', './favicon.png',
   './assets/logo-360.webp', './assets/logo-720.webp', './assets/logo-1200.webp',
   './assets/book1-cover-480.webp', './assets/book3-cover-480.webp', './assets/book2-cover-v2-640.webp', './assets/book2-cover-v2-1024.webp', './assets/book4-cover-480.webp', './assets/book4-cover-768.webp',
