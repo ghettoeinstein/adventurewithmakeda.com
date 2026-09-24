@@ -1124,3 +1124,8 @@ p { margin: 0 0 1em; }
 .cast-stage img { filter: drop-shadow(0 16px 14px rgba(0, 0, 0, .5)); }
 .cast-stage::after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 150px; height: 18px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 215, 120, .7), transparent 75%); }
 @media (max-width: 860px) { .nameplate img { width: 88px; } .lineup::after { display: none; } }
+
+/* ---------- Makeda & Friends page ---------- */
+.crew-page { padding-top: clamp(3rem, 6vw, 5rem); }
+.crew-head h1 { color: var(--plum-800); margin-bottom: .35em; }
+.crew-crown { width: 76px; height: auto; margin: 0 auto .6rem; filter: drop-shadow(0 8px 10px rgba(120, 60, 0, .3)); }
