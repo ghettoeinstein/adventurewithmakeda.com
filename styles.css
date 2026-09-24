@@ -1035,3 +1035,61 @@ p { margin: 0 0 1em; }
   .library { grid-template-columns: repeat(2, 1fr); }
   .library > li:last-child { grid-column: 1 / -1; justify-self: center; width: 50%; }
 }
+.roster .cameo .ring { width: clamp(170px, 18vw, 230px); }
+
+/* ==========================================================================
+   Characters
+   ========================================================================== */
+.lineup-section { background: radial-gradient(70% 60% at 50% 30%, #fff 0%, transparent 70%), linear-gradient(180deg, #f3ecff 0%, #fde8f4 60%, #fff3dc 100%); overflow: hidden; }
+.lineup-section .section-head h2 { color: var(--plum-800); }
+.lineup { list-style: none; margin: 0 auto; padding: 0 0 20px; max-width: 1180px; display: flex; align-items: flex-end; justify-content: center; gap: clamp(0px, 1vw, 14px); position: relative; }
+.lineup::before { /* the cloud stage they stand on */
+  content: ""; position: absolute; left: 2%; right: 2%; bottom: 62px; height: 70px; border-radius: 50%; z-index: 0;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 200, 120, .45), rgba(255, 170, 220, .25) 60%, transparent 72%); filter: blur(6px); }
+.actor { position: relative; z-index: 1; display: grid; justify-items: center; flex: 0 1 auto; }
+.actor a { display: block; line-height: 0; border-radius: 20px; }
+.actor a img { height: calc(var(--h) * 1px * var(--k, .62)); width: auto; filter: drop-shadow(0 14px 12px rgba(80, 30, 110, .28)); transition: transform .5s var(--spring), filter .3s;
+  animation: bob 5s ease-in-out calc(var(--i) * -.7s) infinite alternate; --r0: 0deg; --r1: 0deg; }
+.actor-label { width: clamp(90px, 10vw, 150px); height: auto; margin-top: 10px; }
+@media (hover: hover) { .actor a:hover img { transform: translateY(-14px) scale(1.05); filter: drop-shadow(0 22px 18px rgba(80, 30, 110, .35)) drop-shadow(0 0 22px color-mix(in srgb, var(--c) 45%, transparent)); animation-play-state: paused; } }
+
+.cast-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.4rem, 3vw, 2.4rem); }
+.cast-grid > li:nth-child(n+5) { transform: translateX(calc(50% + clamp(.7rem, 1.5vw, 1.2rem))); }
+.cast-card { display: grid; justify-items: center; text-align: center; padding: 1.6rem 1.2rem 1.8rem; border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .96), rgba(255, 244, 252, .92)); color: var(--ink);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 7px color-mix(in srgb, var(--c) 55%, #f5c451), 0 26px 50px -18px rgba(0, 0, 0, .55); scroll-margin-top: calc(var(--header-h) + 24px); }
+.cast-stage { position: relative; height: 260px; width: 100%; display: grid; place-items: end center; }
+.cast-stage img { position: relative; max-height: 100%; width: auto; filter: drop-shadow(0 12px 10px rgba(60, 20, 90, .25)); transition: transform .5s var(--spring); }
+.cast-glow { position: absolute; left: 50%; bottom: 0; width: 220px; height: 220px; transform: translateX(-50%); border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--c, #f5c451) 38%, transparent), transparent 68%); }
+.cast-label { width: 170px; height: auto; margin: .8rem 0 .2rem; }
+.cast-card .role { font: italic 700 1.12rem var(--story); color: var(--c); margin: 0 0 .5rem; }
+.cast-card .bio { margin: 0; color: var(--ink-soft); font-size: .98rem; }
+@media (hover: hover) { .cast-card:hover .cast-stage img { transform: translateY(-8px) scale(1.04); } }
+
+/* home spotlight */
+.spotlight { position: relative; display: grid; place-items: end center; min-height: 480px; justify-self: center; width: 100%; max-width: 380px; --c: #f5c451; }
+.spotlight img { position: relative; height: clamp(380px, 38vw, 520px); width: auto; filter: drop-shadow(0 24px 22px rgba(0, 0, 0, .45)); animation: bob 5s ease-in-out infinite alternate; --r0: -1deg; --r1: 1deg; }
+.spotlight .cast-glow { width: 360px; height: 360px; bottom: 30px; background: radial-gradient(circle, rgba(255, 214, 110, .5), rgba(255, 120, 200, .18) 45%, transparent 70%); }
+.meet-strip { display: flex; align-items: flex-end; gap: 4px; margin: 1.6rem 0 .2rem; height: 86px; }
+.meet-strip img { height: 100%; width: auto; filter: drop-shadow(0 6px 6px rgba(0, 0, 0, .35)); }
+.meet-strip img:nth-child(2), .meet-strip img:nth-child(6) { height: 62%; }
+
+@media (max-width: 1080px) { .cast-grid { grid-template-columns: repeat(2, 1fr); } .cast-grid > li:nth-child(n+5) { transform: none; } .cast-grid > li:last-child { grid-column: 1 / -1; justify-self: center; width: min(100%, 50%); } }
+@media (max-width: 860px) {
+  .lineup { flex-wrap: wrap; row-gap: 1.6rem; }
+  .actor { flex: 0 0 30%; }
+  .actor a img { --k: .34; }
+  .lineup::before { display: none; }
+  .spotlight { min-height: 0; }
+  .spotlight img { height: 380px; }
+  .meet-strip { justify-content: center; height: 70px; }
+}
+@media (max-width: 520px) { .cast-grid { grid-template-columns: 1fr; } .cast-grid > li:last-child { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .actor a img, .spotlight img { animation: none; } }
+/* card fixes: figure fits its stage; rows centered (4 + 3) */
+.cast-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+.cast-grid > li { flex: 0 0 calc((100% - 3 * clamp(1.4rem, 3vw, 2.4rem)) / 4); transform: none !important; width: auto !important; }
+.cast-stage img { height: 100%; max-height: 260px; width: auto; max-width: 100%; object-fit: contain; }
+@media (max-width: 1080px) { .cast-grid > li { flex-basis: calc((100% - clamp(1.4rem, 3vw, 2.4rem)) / 2); } }
+@media (max-width: 520px) { .cast-grid > li { flex-basis: 100%; } .cast-stage { height: 240px; } }
