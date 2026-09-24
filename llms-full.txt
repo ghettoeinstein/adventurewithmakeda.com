@@ -1,0 +1,45 @@
+# Adventure with Makeda
+
+> A family-centered children's story world by author Angel Washington. Makeda is a curious, joyful, kind-hearted girl whose adventures celebrate big dreams, strong roots, family, imagination, and kindness, guided by four values: Learn, Faith, Love, and Happiness.
+
+Adventure with Makeda is a children's media property spanning illustrated storybooks, an official theme song, and future animation, music, learning, and play. The website is a static, installable web app at https://adventurewithmakeda.com.
+
+## Pages
+- [Adventure with Makeda](https://adventurewithmakeda.com/): Step into the Makeda Multiverse — five storybooks by Angel Washington, a theme song, and a world of family, friendship, imagination, and joy built on Learn, Faith, Love, and Happiness.
+- [Our Story](https://adventurewithmakeda.com/story.html): Meet Makeda, her brother Apollo, and Faith the lion cub — and the heart behind Adventure with Makeda.
+- [The Multiverse](https://adventurewithmakeda.com/world.html): Explore all five worlds of Adventure with Makeda: Welcome to Ethiopia, The Forest of Belonging, Auntie Rocky’s Legacy Garden, The Realm of Brilliant Minds, and Milo’s Magical Groove.
+- [Makeda & Friends](https://adventurewithmakeda.com/characters.html): Meet Makeda, Sahara, Faith, Rocky, Milo, Apollo, and Kito — the family and friends of Adventure with Makeda.
+- [Theme Song](https://adventurewithmakeda.com/song.html): Listen and sing along to the Adventure with Makeda theme song: learn, laugh, love, explore!
+- [Parents & Partners](https://adventurewithmakeda.com/parents.html): Adventure with Makeda for families, press, publishers, licensing, and values-aligned partners.
+
+## Books (the Makeda Multiverse)
+- Book 1: Welcome to Ethiopia — Makeda points toward a golden city and waterfalls, walking beside Faith, her lion cub.
+- Book 2: The Forest of Belonging — Makeda walks a mossy branch with a compass, a hummingbird, a pangolin and an otter.
+- Book 3: Auntie Rocky’s Legacy Garden — Makeda writes in her journal in a blooming garden with Faith.
+- Book 4: Apollo and the Realm of Brilliant Minds — Makeda and her brother Apollo ride Faith, a winged lion cub, over floating islands.
+- Book 5: Milo’s Magical Groove — Makeda and her cousin Milo dance on a glowing treehouse stage full of music notes and forest friends.
+
+## Characters
+- Makeda (The curious explorer): Joyful, kind-hearted, and brave enough to step through every new door — and to bring others along. Her name means greatness.
+- Sahara (Makeda’s best friend): One of Makeda’s closest friends, Sahara keeps every adventure fun — reminding her to laugh, loosen up, and not take things too seriously.
+- Faith (The lion cub companion): Playful, loyal, and full of heart — Makeda’s best friend on every adventure.
+- Rocky (Auntie Rocky): Her love lives on in every lesson, every dream, and every heart. Her garden teaches that love is the root of strong families.
+- Milo (Makeda’s cousin): Music, dancing, and big-cousin energy — Milo helps everyone find their beat.
+- Apollo (Makeda’s brother): A bright, big-hearted guide who knows that every kind of mind has something brilliant to give.
+- Kito (Makeda’s bird friend): Bright feathers that shimmer like the sunset — Kito is always first to spot the way.
+
+## Contact
+- Press, publishing, licensing, and partnerships: hello@adventurewithmakeda.com
+
+## Theme song lyrics (chorus)
+Adventure with Makeda! Come on, everybody, let’s go! Adventure with Makeda! There’s so much waiting to know! Learn, laugh, love, explore, open up another door!
+
+## Values
+- Learn: Discover something new.
+- Faith: Believe, trust, and keep going.
+- Love: Let kindness lead the way.
+- Happiness: Find joy and share it.
+
+## Optional
+- [Full text for LLMs](https://adventurewithmakeda.com/llms-full.txt)
+- [Sitemap](https://adventurewithmakeda.com/sitemap.xml)

@@ -1,5 +1,5 @@
 // Pages: network-first. Assets: stale-while-revalidate, so updates land on the next visit.
-const CACHE = 'awm-multiverse-v15';
+const CACHE = 'awm-multiverse-v16';
 const CORE = [
   './', './index.html', './story.html', './world.html', './characters.html', './song.html', './parents.html',
   './styles.css', './site.js', './enchant.js', './manifest.json', './favicon.png',

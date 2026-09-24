@@ -1,0 +1,6 @@
+# Adventure with Makeda — everyone is welcome, including AI assistants.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://adventurewithmakeda.com/sitemap.xml
