@@ -1093,3 +1093,34 @@ p { margin: 0 0 1em; }
 .cast-stage img { height: 100%; max-height: 260px; width: auto; max-width: 100%; object-fit: contain; }
 @media (max-width: 1080px) { .cast-grid > li { flex-basis: calc((100% - clamp(1.4rem, 3vw, 2.4rem)) / 2); } }
 @media (max-width: 520px) { .cast-grid > li { flex-basis: 100%; } .cast-stage { height: 240px; } }
+
+/* ---------- characters: on-brand stage, nameplates, jewel cards ---------- */
+.lineup-section { background: radial-gradient(60% 50% at 50% 70%, rgba(255, 200, 120, .22), transparent 70%), radial-gradient(90% 70% at 50% 0%, #4a1870 0%, var(--plum-900) 60%, var(--plum-950) 100%); }
+.lineup-section .section-head h2 { color: var(--gold-hi); }
+.lineup-section .lede { color: #e5d3b5; }
+.lineup { padding-bottom: 40px; }
+.lineup::before { /* gold stage */
+  bottom: 44px; height: 46px; border-radius: 50%; filter: none;
+  background: radial-gradient(50% 50% at 50% 40%, #ffe7a0 0%, #e8ac35 45%, #8a4f0c 80%, transparent 82%);
+  box-shadow: 0 0 60px rgba(255, 200, 110, .45); opacity: .9; }
+.lineup::after { /* spotlight cone */
+  content: ""; position: absolute; left: 10%; right: 10%; top: -40px; bottom: 60px; z-index: 0; pointer-events: none;
+  background: radial-gradient(50% 60% at 50% 100%, rgba(255, 236, 180, .22), transparent 70%); }
+.actor a img { filter: drop-shadow(0 18px 14px rgba(0, 0, 0, .5)); }
+@media (hover: hover) { .actor a:hover img { filter: drop-shadow(0 26px 20px rgba(0, 0, 0, .55)) drop-shadow(0 0 26px color-mix(in srgb, var(--c) 60%, transparent)); } }
+.nameplate { display: inline-grid; place-items: center; margin-top: 14px; padding: 6px 14px 4px; border-radius: 999px; position: relative; z-index: 2;
+  background: linear-gradient(180deg, #fffaf0, #f6e2b6); box-shadow: 0 0 0 2px #fff, 0 0 0 5px color-mix(in srgb, var(--c) 60%, #e2a83a), 0 10px 18px rgba(0, 0, 0, .35); }
+.nameplate img { width: clamp(84px, 8.5vw, 128px); height: auto; }
+.actor-label { display: none; }
+
+.cast-card { color: #f6ead0;
+  background: radial-gradient(90% 60% at 50% 30%, color-mix(in srgb, var(--c) 42%, #2a0d55) 0%, #2a0d55 60%, #1a0636 100%);
+  box-shadow: 0 0 0 3px #ffe7a0, 0 0 0 8px #e2a83a, 0 0 0 10px #7a440c, 0 30px 50px -16px rgba(60, 20, 0, .55); }
+.cast-card .role { color: #ffd0ec; }
+.cast-card .bio { color: #eadcf0; }
+.cast-card .nameplate { margin: 1rem 0 .6rem; }
+.cast-card .nameplate img { width: 150px; }
+.cast-glow { background: radial-gradient(circle, color-mix(in srgb, var(--c, #f5c451) 70%, #fff 10%), transparent 66%); opacity: .75; }
+.cast-stage img { filter: drop-shadow(0 16px 14px rgba(0, 0, 0, .5)); }
+.cast-stage::after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 150px; height: 18px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(50% 50%, rgba(255, 215, 120, .7), transparent 75%); }
+@media (max-width: 860px) { .nameplate img { width: 88px; } .lineup::after { display: none; } }
